@@ -114,7 +114,7 @@ while count<len(msgToSend):
                 time.sleep(1)
 
                 # Send message
-                # taeget is your target Name and msgToSend is you message
+                # target is your target Name and msgToSend is you message
                 input_box.send_keys("Hello, " + target + "."+ Keys.SHIFT + Keys.ENTER + msgToSend[count][3] + Keys.SPACE) # + Keys.ENTER (Uncomment it if your msg doesnt contain '\n')
                 # Link Preview Time, Reduce this time, if internet connection is Good
                 time.sleep(10)
