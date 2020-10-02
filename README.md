@@ -50,7 +50,7 @@ Step 5: run whatsapp.py using Python3
 ```sh
 $ python3 whatsapp.py
 ```
-Step 6: When the browser is opened web.whatsapp.com will be opened and will ask to scan a QR code when you it first time
+Step 6: When the browser is opened, web.whatsapp.com will be opened and will ask to scan a QR code when you do it for the first time.
 
 Step 7: After Scanning the QR code, you will be asked to press Enter Key in the terminal.
 
