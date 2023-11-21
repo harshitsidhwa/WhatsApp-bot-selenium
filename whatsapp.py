@@ -42,7 +42,28 @@ driver.get("https://web.whatsapp.com/")
 # note this time is being used below also
 wait = WebDriverWait(driver, 10)
 wait5 = WebDriverWait(driver, 5)
-input("Scan the QR code and then press Enter")
+
+#If you look, you can also use this code bellow to recognize if the QR code is on the page, if it, you start to wait it desapears, when this happens, U wait for the contacts (automatically   wait for load the messages)
+#And before that, you start your logics, this provides from some errors like the user press enter after the contacts finished the loading!
+
+QRcode = True
+contacts = False
+
+
+while QRcode:
+    try:
+        while driver.find_element(By.CSS_SELECTOR, "#app > div > div > div.landing-window > div.landing-main > div > div > div._3AjBo > ol > li:nth-child(2) > strong:nth-child(2) > span > svg"):
+            pass
+    except:
+        QRcode = False
+
+while contacts == False:
+    try:
+        while driver.find_element(By.CSS_SELECTOR, "#app > div > div > div._2Ts6i._3RGKj > header > div._604FD > div > span > div:nth-child(5) > div > span"):
+            contacts = True
+            pass
+    except:
+        pass
 
 # Message to send list
 # 1st Parameter: Hours in 0-23
